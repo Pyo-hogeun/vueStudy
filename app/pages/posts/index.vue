@@ -1,5 +1,7 @@
 <script setup lang="ts">
-const postsQuery = usePosts()
+const postsQuery = usePosts();
+const route = useRoute();
+console.log('test', route);
 </script>
 
 <template>

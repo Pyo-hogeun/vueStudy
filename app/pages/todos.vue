@@ -38,3 +38,4 @@ const todoStore = useTodoStore()
     <p class="text-sm text-slate-500">완료된 할 일: {{ todoStore.doneCount }}개</p>
   </section>
 </template>
+
