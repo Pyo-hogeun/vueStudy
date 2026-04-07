@@ -14,7 +14,7 @@ const changeMode = () => {
   <div
     :class="[
       'min-h-screen layout transition-colors',
-      mode === 'dark' ? 'bg-slate-900 text-slate-100' : 'bg-slate-100 text-slate-900'
+      mode === 'dark' ? 'bg-slate-900 text-slate-100' : 'bg-slate-100 text-slate-900 dark'
     ]"
   >
     <NuxtRouteAnnouncer />

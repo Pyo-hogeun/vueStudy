@@ -11,5 +11,5 @@ html, body{
   padding: 0;
 }
 .dark{
-  --blue: purple;
+  background-color: var(--blue);
 }
