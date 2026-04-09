@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const props = defineProps<{
-  mode: string
+  mode: 'light' | 'dark'
   modelValue: string
   placeholder?: string
 }>()
@@ -15,10 +15,11 @@ const onInput = ($event: Event) => {
 }
 </script>
 <template>
-  <div :class="mode === 'light'?'input-wrap':'input-wrap darken'">
+  <div class="input-wrap">
     <input
       :value="props.modelValue"
       :placeholder="props.placeholder"
+      :class="props.mode === 'dark' ? 'is-dark' : 'is-light'"
       @input="onInput"
     />
   </div>
@@ -30,14 +31,19 @@ input{
   border-radius: 0.4em;
   border: 1px solid gray;
   padding: 0 0.5em;
-  background-color: gray;
+}
+
+.is-light{
+  background-color: #ffffff;
+  color: #0f172a;
+}
+
+.is-dark{
+  background-color: #1e293b;
+  color: #f8fafc;
+  border-color: #475569;
 }
 .input-wrap{
   margin: 1em;
-  &.darken{
-    input{
-      background-color: white;
-    }
-  }
 }
 </style>

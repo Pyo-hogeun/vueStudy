@@ -1,12 +1,9 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-
 type Mode = 'light' | 'dark'
 
-const mode = ref<Mode>('light')
+const mode = useState<Mode>('mode', () => 'light')
 
-const changeMode = (event:any) => {
-  console.log(event);
+const changeMode = () => {
   mode.value = mode.value === 'light' ? 'dark' : 'light'
 }
 </script>

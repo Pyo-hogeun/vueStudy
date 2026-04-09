@@ -1,7 +1,7 @@
 <template>
   <h2>Emit / props 관련 스터디 페이지</h2>
   <child @setup-complete="handleComplete" @setup-reset="handleReset" />
-  <styleInput v-model="name" placeholder="안녕하세요123"/>
+  <styleInput v-model="name" :mode="mode" placeholder="안녕하세요123"/>
   <!-- 내부표현 ⬇️ -->
   <!-- <styleInput :modelValue="name" @update:modelValue="name = $event" placeholder="안녕하세요123"/> -->
   
@@ -11,6 +11,9 @@
 import StyleInput from '~/components/styleInput.vue';
 import Child from './child.vue';
 import { ref } from 'vue';
+
+const mode = useState('mode', () => 'light')
+
 const handleComplete = (e) => {
   console.log('설정완료 - 부모', e);
 }
