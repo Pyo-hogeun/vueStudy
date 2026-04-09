@@ -2,6 +2,9 @@
   <h2>Emit / props 관련 스터디 페이지</h2>
   <child @setup-complete="handleComplete" @setup-reset="handleReset" />
   <styleInput v-model="name" placeholder="안녕하세요123"/>
+  <!-- 내부표현 ⬇️ -->
+  <!-- <styleInput :modelValue="name" @update:modelValue="name = $event" placeholder="안녕하세요123"/> -->
+  
   <p>이름 : {{ name }}</p>
 </template>
 <script setup>

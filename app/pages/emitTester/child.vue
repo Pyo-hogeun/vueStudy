@@ -21,3 +21,9 @@ const handleResetState = () => {
   emit('setup-reset', 1);
 }
 </script>
+<style scoped lang="scss">
+button{
+  font-size: 1em;
+  margin: 0.2em;
+}
+</style>
