@@ -5,7 +5,8 @@ type Mode = 'light' | 'dark'
 
 const mode = ref<Mode>('light')
 
-const changeMode = () => {
+const changeMode = (event:any) => {
+  console.log(event);
   mode.value = mode.value === 'light' ? 'dark' : 'light'
 }
 </script>
@@ -25,6 +26,7 @@ const changeMode = () => {
           <NuxtLink to="/" class="rounded px-3 py-2 hover:bg-slate-100" active-class="bg-slate-900 text-white">홈</NuxtLink>
           <NuxtLink to="/todos" class="rounded px-3 py-2 hover:bg-slate-100" active-class="bg-slate-900 text-white">상태관리</NuxtLink>
           <NuxtLink to="/posts/aaa" class="rounded px-3 py-2 hover:bg-slate-100" active-class="bg-slate-900 text-white">비동기</NuxtLink>
+          <NuxtLink to="/emitTester" class="rounded px-3 py-2 hover:bg-slate-100" active-class="bg-slate-900 text-white">emit테스터</NuxtLink>
         </nav>
       </div>
       <div class="mode px-4 pb-4">
@@ -62,7 +64,7 @@ header nav {
 
   a {
     font-size: 20px;
-    color: var(--blue);
+    // color: var(--blue);
   }
 }
 </style>

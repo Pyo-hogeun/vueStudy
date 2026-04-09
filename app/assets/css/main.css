@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root{
-  --blue: blue;
+  --blue: skyblue;
 }
 
 html, body{
