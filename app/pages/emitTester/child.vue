@@ -8,22 +8,22 @@
   </div>
 </template>
 <script setup lang="ts">
-const emit = defineEmits<{
-  (e: 'setup-complete', value: string | number):void
-  (e: 'setup-reset', value: string | number):void
-}>();
-const handleCompleteState = () => {
-  console.log('설정완료 - 자식');
-  emit('setup-complete', 12345);
-}
-const handleResetState = () => {
-  console.log('재설정 - 자식');
-  emit('setup-reset', 1);
-}
+  const emit = defineEmits<{
+    (e: 'setup-complete', value: string | number):void
+    (e: 'setup-reset', value: string | number):void
+  }>();
+  const handleCompleteState = () => {
+    console.log('설정완료 - 자식');
+    emit('setup-complete', 12345);
+  }
+  const handleResetState = () => {
+    console.log('재설정 - 자식');
+    emit('setup-reset', 1);
+  }
 </script>
 <style scoped lang="scss">
-button{
-  font-size: 1em;
-  margin: 0.2em;
-}
+  button{
+    font-size: 1em;
+    margin: 0.2em;
+  }
 </style>
