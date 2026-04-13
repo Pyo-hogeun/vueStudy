@@ -1,7 +1,7 @@
 <script setup lang="ts">
 type Mode = 'light' | 'dark'
 
-const mode = useState<Mode>('mode', () => 'light')
+const mode = useMode()
 
 const changeMode = () => {
   mode.value = mode.value === 'light' ? 'dark' : 'light'

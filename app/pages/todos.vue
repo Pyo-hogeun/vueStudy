@@ -1,5 +1,8 @@
 <script setup lang="ts">
+import StyleInput from '~/components/styleInput.vue';
+
 const todoStore = useTodoStore()
+const mode = useMode();
 </script>
 
 <template>
@@ -12,12 +15,15 @@ const todoStore = useTodoStore()
     <div class="flex gap-2">
       <input
         v-model="todoStore.newTodo"
+        :mode="mode"
         type="text"
-        class="w-full rounded-lg border border-slate-300 px-3 py-2"
+        class="w-full rounded-lg border border-slate-300 px-3 py-2 grow-2"
+        :class="mode==='light'?'':'bg-black border-slate-100'"
         placeholder="새 스터디 할 일을 입력하세요"
         @keyup.enter="todoStore.addTodo"
       >
-      <button class="rounded-lg bg-indigo-600 px-4 py-2 font-medium text-white" @click="todoStore.addTodo">
+
+      <button class="rounded-lg basis-auto bg-indigo-600 px-4 py-2 font-medium text-white" @click="todoStore.addTodo">
         추가
       </button>
     </div>

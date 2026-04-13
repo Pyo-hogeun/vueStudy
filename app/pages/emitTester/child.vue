@@ -1,10 +1,16 @@
 <template>
-  <h3>자식</h3>
+  <h3 class="text-lg">자식</h3>
   <p>여기에 emit(방출)을 정의한다</p>
 
   <div>
-    <button @click="handleCompleteState">설정완료</button>
-    <button @click="handleResetState">재설정</button>
+    <button 
+      @click="handleCompleteState"
+      class="rounded border px-3 py-1 text-sm border-slate-300 bg-white text-slate-900 mr-2"
+    >설정완료</button>
+    <button
+      @click="handleResetState"
+      class="rounded border px-3 py-1 text-sm border-slate-300 bg-white text-slate-900"
+    >재설정</button>
   </div>
 </template>
 <script setup lang="ts">
@@ -22,8 +28,5 @@
   }
 </script>
 <style scoped lang="scss">
-  button{
-    font-size: 1em;
-    margin: 0.2em;
-  }
+  
 </style>

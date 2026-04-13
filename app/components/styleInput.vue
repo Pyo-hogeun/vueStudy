@@ -20,6 +20,7 @@ const onInput = ($event: Event) => {
       :value="props.modelValue"
       :placeholder="props.placeholder"
       :class="props.mode === 'dark' ? 'is-dark' : 'is-light'"
+      class="w-full rounded-lg border border-slate-300 px-3 py-2"
       @input="onInput"
     />
   </div>

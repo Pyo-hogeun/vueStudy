@@ -1,5 +1,9 @@
 <script setup lang="ts">
+import StyleInput from '~/components/styleInput.vue';
+
 const address = useAddressStore();
+const mode = useMode();
+
 </script>
 <template>
   <h2>주소저장</h2>
@@ -7,19 +11,19 @@ const address = useAddressStore();
   <div class="address-wrap">
     <div class="item">
       <label for="">이름</label>
-      <input
+      <StyleInput
+        :mode="mode"
         v-model="address.addressOwner"
-        type="text"
         placeholder="이름을 입력하세요"
-      >
+      />
     </div>
     <div class="item">
       <label for="">주소</label>
-      <input
+      <StyleInput
+        :mode="mode"
         v-model="address.address"
-        type="text"
         placeholder="주소를 입력하세요"
-      >
+      />
     </div>
   </div>
 </template>

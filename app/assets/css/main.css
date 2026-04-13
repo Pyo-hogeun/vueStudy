@@ -1,15 +1,5 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-:root{
-  --blue: skyblue;
-}
-
-html, body{
-  margin: 0;
-  padding: 0;
-}
-.dark{
-  background-color: var(--blue);
+button{
+  cursor: pointer;
 }
