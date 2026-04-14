@@ -2,15 +2,19 @@
   <h3 class="text-lg">자식</h3>
   <p>여기에 emit(방출)을 정의한다</p>
 
-  <div>
-    <button 
+  <div class="button-group">
+    <StyleButton 
       @click="handleCompleteState"
-      class="rounded border px-3 py-1 text-sm border-slate-300 bg-white text-slate-900 mr-2"
-    >설정완료</button>
-    <button
+      text="설정완료"
+    />
+    <StyleButton
       @click="handleResetState"
-      class="rounded border px-3 py-1 text-sm border-slate-300 bg-white text-slate-900"
-    >재설정</button>
+      text="재설정"
+    />
+    <StyleButton
+      text="스타일버튼 테스트"
+      @click="handleTestStyleButton"
+    />
   </div>
 </template>
 <script setup lang="ts">
@@ -26,7 +30,15 @@
     console.log('재설정 - 자식');
     emit('setup-reset', 1);
   }
+
+  const handleTestStyleButton = () => {
+    console.log('이건 공통스타일 버튼 활용에 대한 테스트입니다.');
+  }
 </script>
 <style scoped lang="scss">
-  
+  .button-group{
+    display: flex;
+    gap: 4px;
+    margin: 10px 0;
+  }
 </style>

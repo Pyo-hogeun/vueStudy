@@ -16,15 +16,16 @@ const changeMode = () => {
     ]"
   >
     <NuxtRouteAnnouncer />
-    <header :class="mode === 'dark' ? 'border-slate-700 bg-slate-800' : 'border-slate-200 bg-white'" class="border-b">
+    <header :class="mode === 'dark' ? 'border-slate-700 bg-slate-800 mode-dark' : 'border-slate-200 bg-white'" class="border-b">
       <div class="mx-auto flex max-w-4xl items-center justify-between px-4 py-4">
         <h1 class="text-xl font-bold">Vue.js 스터디 미니 프로젝트</h1>
         <nav class="flex gap-2 text-sm font-medium">
-          <NuxtLink to="/" class="rounded px-3 py-2 hover:bg-slate-100" active-class="bg-slate-900 text-white">홈</NuxtLink>
-          <NuxtLink to="/todos" class="rounded px-3 py-2 hover:bg-slate-100" active-class="bg-slate-900 text-white">상태관리</NuxtLink>
-          <NuxtLink to="/posts" class="rounded px-3 py-2 hover:bg-slate-100" active-class="bg-slate-900 text-white">비동기</NuxtLink>
-          <NuxtLink to="/emitTester" class="rounded px-3 py-2 hover:bg-slate-100" active-class="bg-slate-900 text-white">emit테스터</NuxtLink>
-          <NuxtLink to="/address" class="rounded px-3 py-2 hover:bg-slate-100" active-class="bg-slate-900 text-white">주소관리</NuxtLink>
+          <NuxtLink to="/" class="rounded px-3 py-2 hover:bg-slate-100" :class="mode==='dark'?'hover:bg-slate-600':''" active-class="bg-slate-900 text-white">홈</NuxtLink>
+          <NuxtLink to="/todos" class="rounded px-3 py-2 hover:bg-slate-100" :class="mode==='dark'?'hover:bg-slate-600':''" active-class="bg-slate-900 text-white">상태관리</NuxtLink>
+          <NuxtLink to="/posts" class="rounded px-3 py-2 hover:bg-slate-100" :class="mode==='dark'?'hover:bg-slate-600':''" active-class="bg-slate-900 text-white">비동기</NuxtLink>
+          <NuxtLink to="/emitTester" class="rounded px-3 py-2 hover:bg-slate-100" :class="mode==='dark'?'hover:bg-slate-600':''" active-class="bg-slate-900 text-white">emit테스터</NuxtLink>
+          <NuxtLink to="/address" class="rounded px-3 py-2 hover:bg-slate-100" :class="mode==='dark'?'hover:bg-slate-600':''" active-class="bg-slate-900 text-white">주소관리</NuxtLink>
+          <NuxtLink to="/products" class="rounded px-3 py-2 hover:bg-slate-100" :class="mode==='dark'?'hover:bg-slate-600':''" active-class="bg-slate-900 text-white">제품목록</NuxtLink>
         </nav>
       </div>
       <div class="mode px-4 pb-4">
