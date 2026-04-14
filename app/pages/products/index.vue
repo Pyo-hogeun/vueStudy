@@ -1,6 +1,7 @@
 <script setup lang="ts">
   const productsQuery = useProducts();
   const mode = useMode();
+  const { formatPrice } = useNumberFormat();
 </script>
 <template>
   <h2>상품목록 api</h2>
@@ -13,7 +14,7 @@
       </div>
       <div class="flex-auto">
         <div class="name text-slate-600 text-lg">{{ product.name }}</div>
-        <div class="price text-slate-600 text-xs">{{ product.price }}</div>
+        <div class="price text-slate-600 text-xs">{{ formatPrice(product.price) }}원</div>
         <div class="store-name text-slate-600 text-xs">{{ product.storeName }} &nbsp;(<span class="store-id text-slate-400 text-xs">{{ product.store }}</span>)</div>
       </div>
       
